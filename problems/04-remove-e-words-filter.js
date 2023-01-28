@@ -10,10 +10,18 @@ Examples:
 console.log(removeEWords('What time is it everyone?')); // 'What is it'
 console.log(removeEWords('Enter the building')); // 'building'
 
+//change string to array
+//each value in the array we would filter out that word if E is in thet of the word
+ last par
 */
 
 let removeEWords = function(sentence) {
-    // Your code here
+  let arr = sentence.split(" ");
+  let answer = arr.filter(function (value){
+    if(value.includes('e') || value.includes('E')) return false;
+    else return true;
+  })
+  return answer.join(" ");
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -22,4 +30,4 @@ try {
   module.exports = removeEWords;
 } catch (e) {
   module.exports = null;
-}
+}
