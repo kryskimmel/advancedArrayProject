@@ -17,8 +17,21 @@ console.log(hasThreeVowels('go home'));         //  false
 */
 
 let hasThreeVowels = function(string) {
-    // Your code here
+  let vowels = "aeiouAEIOU";
+  let count = [];
+  let split = string.split("");
+  split.forEach(function(value){
+    if(!count.includes(value) && vowels.includes(value)) count.push(value);
+  })
+  if(count.length >= 3) return true;
+  else return false;
 };
+
+console.log(hasThreeVowels('delicious'));       //  true
+console.log(hasThreeVowels('bootcamp prep'));   //  true
+console.log(hasThreeVowels('bootcamp'));        //  false
+console.log(hasThreeVowels('dog'));             //  false
+console.log(hasThreeVowels('go home'));         //  false
 
 // Your code here
 
@@ -28,4 +41,4 @@ try {
     module.exports = hasThreeVowels;
 } catch (e) {
     module.exports = null;
-}
+}
