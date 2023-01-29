@@ -26,8 +26,35 @@ console.log(twoDimensionalProduct(arr2)); // 88
 */
 
 let twoDimensionalProduct = function(arr) {
-    // Your code here
+  let product = 1;
+
+    arr.forEach(function(value){
+
+      value.forEach(function(el){
+      product *= el;
+      });
+
+    });
+    return product;
 };
+
+
+
+
+
+let arr1 = [
+  [6, 4],
+  [5],
+  [3, 1]
+];
+console.log(twoDimensionalProduct(arr1)); // 360
+
+let arr2 = [
+  [11, 4],
+  [2]
+];
+console.log(twoDimensionalProduct(arr2)); // 88
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
