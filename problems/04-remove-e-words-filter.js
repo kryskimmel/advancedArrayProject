@@ -16,21 +16,17 @@ console.log(removeEWords('Enter the building')); // 'building'
 */
 
 let removeEWords = function(sentence) {
-<<<<<<< HEAD
-  let string = '';
-   let filteredE = sentence.filter(function(value) {
-      if (value !== 'e') value += string;
-   });
-return string;
-=======
   let arr = sentence.split(" ");
   let answer = arr.filter(function (value){
     if(value.includes('e') || value.includes('E')) return false;
     else return true;
   })
   return answer.join(" ");
->>>>>>> 4375cb87b1dd4cdf5e2513cd4c329c23e0187a7e
 };
+
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
